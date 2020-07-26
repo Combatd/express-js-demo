@@ -2,8 +2,12 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+const userRoutes = require('./routes/users');
+
 app.use(express.json());
 app.use(express.urlencoded( { extended: true }));
+app.use(userRoutes);
+
 
 app.get('/', (req, res) => {
     res.status(200).json({
