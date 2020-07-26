@@ -7,3 +7,5 @@ This repository is a demo respository to show off the capabilities of the MongoD
 * Collect data from a URL using request.params
 * Understand how to respond with JSON
 * Include built-in express middleware to collect form values and request information
+* Move routing logic into a separate file using the express router
+* Use the express router to refactor routing code
