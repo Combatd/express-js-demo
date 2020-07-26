@@ -9,3 +9,15 @@ This repository is a demo respository to show off the capabilities of the MongoD
 * Include built-in express middleware to collect form values and request information
 * Move routing logic into a separate file using the express router
 * Use the express router to refactor routing code
+
+### Controllers
+
+```
+/*
+POST	/users	Create a user using a payload	Create
+GET	/users	Display a list of users	Read
+GET	/users/:id	Display a single user	Read
+PATCH or PUT *	/users/:id	Edit a user using a payload	Update
+DELETE	/users/:id	Delete a user	Delete
+*/
+```
