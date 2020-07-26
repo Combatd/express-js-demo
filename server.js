@@ -7,6 +7,18 @@ const userRoutes = require('./routes/users');
 app.use(express.json());
 app.use(express.urlencoded( { extended: true }));
 app.use(userRoutes);
+app.use((req, res, next) => {
+    const err = new Error('Not Found');
+    err.status = 404;
+    return next(err);
+});
+app.use((err, req, res, next) => {
+    res.status(err.status || 500); // if unknown error, internal server error 500
+    return res.json({
+        message: err.message,
+        error: app.get('env') === 'development' ? err: {} // displays in development, not production
+    });
+});
 
 
 app.get('/', (req, res) => {
