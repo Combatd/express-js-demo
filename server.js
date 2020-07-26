@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-const userRoutes = require('./routes/users');
+const userRouter = require('./routes/users');
 
 app.use(express.json());
 app.use(express.urlencoded( { extended: true }));
-app.use(userRoutes);
+app.use(userRouter);
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
