@@ -9,9 +9,6 @@ PATCH or PUT *	/users/:id	Edit a user using a payload	Update
 DELETE	/users/:id	Delete a user	Delete
 */
 
-
-const users = []; // will be a database later
-
 router.get('/users', usersController.index);
 router.get('/users/:id', usersController.showUser);
 router.post('/users', usersController.createUser);
