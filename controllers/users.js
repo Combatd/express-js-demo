@@ -1,3 +1,5 @@
+const User = require('../models/Users');
+
 /*
 POST	/users	Create a user using a payload	Create
 GET	/users	Display a list of users	Read
@@ -6,7 +8,7 @@ PATCH or PUT *	/users/:id	Edit a user using a payload	Update
 DELETE	/users/:id	Delete a user	Delete
 */
 
-const users = []; // will be a database later
+const users;
 
 const index = (req, res) => {
     return res.json(users);
