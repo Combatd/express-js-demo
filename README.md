@@ -9,6 +9,8 @@ This repository is a demo respository to show off the capabilities of the MongoD
 * Include built-in express middleware to collect form values and request information
 * Move routing logic into a separate file using the express router
 * Use the express router to refactor routing code
+* Install Mongo and start a Mongo Server
+* Perform CRUD operations in a Mongo console
 
 ### Controllers
 
